@@ -1,5 +1,3 @@
-using Base;
-
 namespace Utilities
 {
     public class DontDestroyThis : SingletonMonoBehaviour<DontDestroyThis>
