@@ -11,16 +11,10 @@ namespace Global
         private const int VersionNumber = 1;
         private string _databaseKey = $"PlayerData_{VersionNumber}";
 
-        public Currency currency = new();
+        public int gold;
         public ThemeType selectedTheme = ThemeType.Fruit;
         [HideInInspector] public ThemeDatabase themeDatabase = new();
         public UnlockedTheme boughtTheme = new();
-
-        protected override void Awake()
-        {
-            base.Awake();
-            Load();
-        }
 
         public void Save()
         {
@@ -55,17 +49,6 @@ namespace Global
         public bool IsThemeUnlocked(ThemeType themeType)
         {
             return boughtTheme.items.Contains(themeType);
-        }
-
-        public bool TryBuyTheme(ThemeType themeType)
-        {
-            if (boughtTheme.items.Contains(themeType)) return false;
-            themeDatabase.themePrice.TryGetValue(themeType, out var price);
-            if (currency.gold < price) return false;
-            currency.SpendCoin(price ?? 0);
-            boughtTheme.items.Add(themeType);
-            Save();
-            return true;
         }
     }
 }

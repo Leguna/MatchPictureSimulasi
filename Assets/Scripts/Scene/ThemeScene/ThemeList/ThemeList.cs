@@ -25,7 +25,7 @@ namespace Scene.ThemeScene.ThemeList
 
         private void UpdateGold()
         {
-            var gold = SaveData.Instance.currency.gold;
+            var gold = SaveData.Instance.gold;
             goldText.text = $"{gold}G";
         }
 
@@ -48,6 +48,7 @@ namespace Scene.ThemeScene.ThemeList
                 var isBuy = TryBuy(obj);
                 if (!isBuy) return;
             }
+
             UpdateGold();
             foreach (var themeItem in _themeItems)
             {
@@ -62,7 +63,7 @@ namespace Scene.ThemeScene.ThemeList
 
         private bool TryBuy(ThemeType themeType)
         {
-            return SaveData.Instance.TryBuyTheme(themeType);
+            return Currency.Instance.TryBuyTheme(themeType);
         }
     }
 }

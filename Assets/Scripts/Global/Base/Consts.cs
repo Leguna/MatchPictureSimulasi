@@ -13,7 +13,7 @@
         {
             public const int Timer = 600;
             public const int TileBoardWidth = 8;
-            public const int TileCount = 120;
+            public const int TileCount = 80;
             public const int RewardGold = 100;
         }
 

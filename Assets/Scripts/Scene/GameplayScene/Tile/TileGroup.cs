@@ -39,7 +39,7 @@ namespace Scene.GameplayScene.Tile
             if (tileCount % 2 != 0 || tileCount < 2) return;
 
             var prefix = "Sprites/";
-            var textureName = prefix + Enum.GetName(typeof(ThemeType), SaveData.Instance.selectedTheme)?.ToLower();
+            var textureName = prefix + Enum.GetName(typeof(ThemeType), Currency.Instance.saveData.selectedTheme)?.ToLower();
             var textures = Resources.LoadAll<Sprite>(textureName);
 
             if (textures.Length == 0)

@@ -50,7 +50,7 @@ namespace Scene.GameplayScene
         {
             Debug.Log("Game Over, You Win! Get 100G as Reward");
             _gameTimer.StopTimer();
-            SaveData.Instance.currency.AddGold(Consts.GameConstant.RewardGold);
+            Currency.Instance.AddGold(Consts.GameConstant.RewardGold);
             _rewardView.Show("Well Done!", $"+{Consts.GameConstant.RewardGold}G");
         }
     }

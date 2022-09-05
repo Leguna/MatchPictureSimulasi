@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3606792868170521595}
   - component: {fileID: 3606792868170521596}
   - component: {fileID: 1450377606}
+  - component: {fileID: 533568127761206981}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -57,8 +58,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb17dce61d124192a36de6b6f49c12c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency:
-    gold: 0
+  gold: 0
   selectedTheme: 0
   boughtTheme:
     items: 0100000000000000
+--- !u!114 &533568127761206981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606792868170521594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1396059f895547a286e8babe7a32f5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveData: {fileID: 1450377606}
