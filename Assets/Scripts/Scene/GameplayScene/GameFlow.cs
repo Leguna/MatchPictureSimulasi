@@ -17,8 +17,10 @@ namespace Scene.GameplayScene
 
         private void Start()
         {
+            var saveData = SaveData.Instance.Load();
             _gameTimer.OnTimeOver(() => SetGameOverState(GameState.Lose));
             _tileGroup.SetCallback(() => SetGameOverState(GameState.Win));
+            _tileGroup.SpawnBoard(saveData.selectedTheme);
             _rewardView.OnCloseSetCallback(BackToMainMenuEvent.Invoke);
         }
 

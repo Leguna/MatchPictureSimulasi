@@ -176,7 +176,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 540, y: 960}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -445,6 +445,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 157952083}
     m_Modifications:
+    - target: {fileID: 2695989981142201179, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.75748146
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695989981142201179, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.2537037
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695989981142201179, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.7758303
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695989981142201179, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -72
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695989981142201179, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -4.2469
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695989981142201179, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.0000305
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695989981142201179, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.123413
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695989981142201180, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
+      propertyPath: m_fontSize
+      value: 42.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695989981142201180, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
+      propertyPath: m_margin.w
+      value: 28.716644
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695989981142201180, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
+      propertyPath: m_margin.y
+      value: 30.767685
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695989981142201180, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2695989981330240533, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
       propertyPath: m_Name
       value: ThemeSelectionView
@@ -536,6 +580,18 @@ PrefabInstance:
     - target: {fileID: 2695989981387011901, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695989982204901875, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.7758303
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695989982204901875, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -50.6669
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695989982204901875, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13.936523
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c397c5af68530e4586b60355b582b8b, type: 3}
