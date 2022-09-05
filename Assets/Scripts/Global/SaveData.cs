@@ -33,7 +33,9 @@ namespace Global
         {
             var jsonGameConfig = PlayerPrefs.GetString(_databaseKey);
             if (jsonGameConfig != null)
+            {
                 JsonUtility.FromJsonOverwrite(jsonGameConfig, this);
+            }
             else
             {
                 boughtTheme = new UnlockedTheme();
@@ -58,8 +60,9 @@ namespace Global
         public bool TryBuyTheme(ThemeType themeType)
         {
             if (boughtTheme.items.Contains(themeType)) return false;
-            if (currency.gold < themeDatabase.themePrice[themeType]) return false;
-            currency.SpendCoin(themeDatabase.themePrice[themeType]);
+            themeDatabase.themePrice.TryGetValue(themeType, out var price);
+            if (currency.gold < price) return false;
+            currency.SpendCoin(price ?? 0);
             boughtTheme.items.Add(themeType);
             Save();
             return true;

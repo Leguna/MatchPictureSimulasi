@@ -20,7 +20,10 @@ namespace Scene.ThemeScene.ThemeList
         private void UpdateView()
         {
             SetNameTag(ThemeType.ToString());
-            SetPrice(SaveData.Instance.themeDatabase.themePrice?[ThemeType]);
+
+            int? price = 0;
+            SaveData.Instance.themeDatabase.themePrice?.TryGetValue(ThemeType, out price);
+            SetPrice(price);
             SetUnlocked(SaveData.Instance.IsThemeUnlocked(ThemeType));
         }
 

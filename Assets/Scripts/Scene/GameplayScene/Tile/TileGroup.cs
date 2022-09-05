@@ -38,8 +38,16 @@ namespace Scene.GameplayScene.Tile
         {
             if (tileCount % 2 != 0 || tileCount < 2) return;
 
-            var textureName = "Sprites/" + Enum.GetName(typeof(ThemeType), SaveData.Instance.selectedTheme)?.ToLower();
+            var prefix = "Sprites/";
+            var textureName = prefix + Enum.GetName(typeof(ThemeType), SaveData.Instance.selectedTheme)?.ToLower();
             var textures = Resources.LoadAll<Sprite>(textureName);
+
+            if (textures.Length == 0)
+            {
+                textureName = prefix + Enum.GetName(typeof(ThemeType), ThemeType.Fruit)?.ToLower();
+                textures = Resources.LoadAll<Sprite>(textureName);
+            }
+
             List<TileData> listTileData = new();
 
             for (int i = 0; i < tileCount / 2; i++)
@@ -62,10 +70,6 @@ namespace Scene.GameplayScene.Tile
                 TileObject tileObject = Instantiate(_tilePrefab, gridLayout.transform);
                 tileObject.SetNewModel(listTileData[i]);
                 tileObject.SetOnClickListener(OnTileClicked);
-            }
-
-            foreach (var tileData in listTileData)
-            {
             }
         }
 
